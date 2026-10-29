@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stella Nwae — Executive Assistant | Aspiring AI Builder</title>
+  <meta name="description" content="Portfolio of Stella Nwae, Executive Assistant in Nairobi, Kenya, teaching herself to build with AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum: #2A0C22;
+      --plum-soft: #6B1238;
+      --rose: #C2185B;
+      --rose-deep: #A3154D;
+      --blush: #F7E4EA;
+      --coral: #FF8A65;
+      --coral-soft: #FFE1D6;
+      --mauve: #E4B7C6;
+      --white: #FFFFFF;
+      --ink: #24091C;
+      --muted: #6A4459;
+      --shadow: 0 2px 4px rgba(42, 12, 34, 0.06), 0 10px 28px rgba(42, 12, 34, 0.10);
+      --shadow-lift: 0 4px 8px rgba(42, 12, 34, 0.10), 0 18px 40px rgba(194, 24, 91, 0.22);
+      --radius: 8px;
+      --nav-h: 3.75rem;
+      --max: 44rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 0.75rem);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(255, 138, 101, 0.22), transparent 40%),
+        radial-gradient(circle at 0% 60%, rgba(194, 24, 91, 0.12), transparent 45%),
+        var(--blush);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--rose-deep);
+      font-weight: 600;
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover { color: var(--plum); }
+
+    :focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: -4rem;
+      background: var(--plum);
+      color: var(--white);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      z-index: 20;
+    }
+
+    .skip:focus { top: 0.75rem; }
+
+    .wrap {
+      width: min(var(--max), 100%);
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
+
+    /* ---------- Nav ---------- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(42, 12, 34, 0.97);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 12px rgba(42, 12, 34, 0.3);
+    }
+
+    .site-nav .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.35rem 0.75rem;
+      min-height: var(--nav-h);
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+
+    .site-nav .brand {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .site-nav .brand span { color: var(--coral); }
+
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav ul a {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      color: #F3DDE3;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .site-nav ul a:hover,
+    .site-nav ul a:focus-visible {
+      color: var(--plum);
+      background: var(--mauve);
+    }
+
+    main {
+      padding-top: 1.75rem;
+      padding-bottom: 4rem;
+    }
+
+    /* ---------- Intro / hero ---------- */
+    #intro {
+      position: relative;
+      overflow: hidden;
+      padding: 2.25rem 1.75rem 2.25rem;
+      border-radius: 10px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum-soft) 45%, var(--rose) 100%);
+      box-shadow: var(--shadow-lift);
+    }
+
+    #intro::after {
+      content: "";
+      position: absolute;
+      right: -3.5rem;
+      top: -3.5rem;
+      width: 11rem;
+      height: 11rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 138, 101, 0.8), rgba(255, 138, 101, 0));
+      pointer-events: none;
+    }
+
+    .kicker {
+      display: inline-block;
+      margin: 0 0 0.85rem;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--plum);
+      background: var(--coral);
+      border-radius: 6px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 7vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--plum);
+    }
+
+    /* little coral underline under section headings */
+    section h2::after {
+      content: "";
+      display: block;
+      width: 2.75rem;
+      height: 4px;
+      margin-top: 0.4rem;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--rose), var(--coral));
+    }
+
+    .pronouns {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #F3DDE3;
+    }
+
+    .title {
+      position: relative;
+      margin: 0 0 1rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--coral);
+    }
+
+    .lede {
+      position: relative;
+      margin: 0;
+      max-width: 36rem;
+      color: #FCEFF2;
+    }
+
+    section { padding: 2.75rem 0 0; }
+
+    .about p {
+      margin: 0;
+      padding: 1.25rem 1.35rem;
+      max-width: 40rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      border-left: 5px solid var(--coral);
+      box-shadow: var(--shadow);
+    }
+
+    /* ---------- Filters ---------- */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.1rem 0 1.6rem;
+    }
+
+    .filters button {
+      font: inherit;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      padding: 0.45rem 1.1rem;
+      border: 2px solid var(--mauve);
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--plum);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .filters button:hover {
+      border-color: var(--rose);
+    }
+
+    .filters button[aria-pressed="true"] {
+      background: var(--rose-deep);
+      border-color: var(--rose-deep);
+      color: var(--white);
+    }
+
+    /* ---------- Timeline ---------- */
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0.25rem 0 0 1.4rem;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.32rem;
+      top: 0.4rem;
+      bottom: 0.4rem;
+      width: 3px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--rose), var(--coral), var(--mauve));
+    }
+
+    .card {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--mauve);
+      border-left: 5px solid var(--rose);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem 1.25rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lift);
+    }
+
+    .card[data-type="job"] { border-left-color: var(--plum); }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: calc(-1.4rem - 0.18rem);
+      top: 1.35rem;
+      width: 0.85rem;
+      height: 0.85rem;
+      border-radius: 50%;
+      background: var(--rose);
+      border: 3px solid var(--blush);
+      box-shadow: 0 0 0 2px var(--rose);
+    }
+
+    .card[data-type="job"]::before {
+      background: var(--plum);
+      box-shadow: 0 0 0 2px var(--plum);
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.65rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .kind {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .card[data-type="project"] .kind {
+      background: #F9D3E0;
+      color: var(--rose-deep);
+    }
+
+    .card[data-type="job"] .kind {
+      background: #EBD3E1;
+      color: var(--plum);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--plum);
+      line-height: 1.3;
+    }
+
+    .place {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .card p { margin: 0 0 0.8rem; }
+
+    .card .link {
+      display: inline-block;
+      margin: 0 0 0.9rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tags li {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.22rem 0.65rem;
+      border-radius: 6px;
+      background: var(--coral-soft);
+      color: #8A3F1F;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-list {
+      margin: 1.1rem 0 0;
+      padding: 0.4rem 1.25rem;
+      list-style: none;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.75rem;
+      padding: 0.85rem 0;
+      border-top: 1px solid var(--mauve);
+    }
+
+    .contact-list li:first-child { border-top: 0; }
+
+    .contact-list span {
+      min-width: 5.5rem;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .contact-list a { word-break: break-word; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 1rem;
+      background: var(--plum);
+      color: #F3DDE3;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      padding: 1.5rem 1rem;
+    }
+
+    footer span { color: var(--coral); }
+
+    @media (max-width: 767px) {
+      :root { --nav-h: 6.25rem; }
+      .wrap { padding-inline: 0.75rem; }
+      main { padding-top: 1.25rem; }
+      #intro { padding: 1.75rem 1.25rem; }
+      .card { padding: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .card, .card:hover { transition: none; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#intro">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Page">
+    <div class="wrap">
+      <a class="brand" href="#intro">Stella Nwae<span>.</span></a>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header id="intro">
+      <p class="kicker">Nairobi, Kenya</p>
+      <h1>Stella Nwae <span class="pronouns">(she/her)</span></h1>
+      <p class="title">Executive Assistant | Aspiring AI Builder</p>
+      <p class="lede">Hi, I’m Stella, an Executive Assistant in Nairobi, Kenya, teaching myself to build with AI. I keep busy teams organised, and I build AI tools that can explain their thinking.</p>
+    </header>
+
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>My path into tech started with curiosity and a lot of community. I’m part of Rewriting the Code, She Can Code and the ALX community. In October 2026 I entered my first hackathon solo, as a complete beginner, and shipped ChainGuard. I like tools that are simple to use and honest about how they work, and I’m growing my skills one project at a time.</p>
+    </section>
+
+    <section id="timeline" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading">Timeline</h2>
+      <div class="filters" role="group" aria-label="Filter timeline">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="job" aria-pressed="false">Jobs</button>
+        <button type="button" data-filter="project" aria-pressed="false">Projects</button>
+      </div>
+
+      <!-- Copy an entire <li class="card"> block and paste it at the top of this list to add a new item. Set data-type to "job" or "project". -->
+      <ol class="timeline">
+        <li class="card" data-type="project">
+          <div class="card-meta">
+            <span class="kind">Project</span>
+            <time datetime="2026">2026</time>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>Built with AI assistance as a Rewriting the Code project: scoped, specced, tested and deployed.</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>AI-Assisted Development</li>
+            <li>Netlify</li>
+          </ul>
+        </li>
+
+        <li class="card" data-type="project">
+          <div class="card-meta">
+            <span class="kind">Project</span>
+            <time datetime="2026-10">October 2026</time>
+          </div>
+          <h3>ChainGuard</h3>
+          <p>An AI agent that helps businesses spot supply-chain risks and explains the reason behind every recommendation. Built solo for the Open Agent Hackathon 2026 (GenAI.works), “Agent That Can Explain Why” track.</p>
+          <a class="link" href="https://github.com/Stellanwae" rel="noopener noreferrer">github.com/Stellanwae</a>
+          <ul class="tags">
+            <li>AI Agents</li>
+            <li>Prompt Engineering</li>
+            <li>GitHub</li>
+            <li>Cursor</li>
+          </ul>
+        </li>
+
+        <li class="card" data-type="job">
+          <div class="card-meta">
+            <span class="kind">Job</span>
+            <time datetime="2026">2026 – Present</time>
+          </div>
+          <h3>Executive Assistant <span class="place">· Investa Farm, Nairobi</span></h3>
+          <p>Supporting leadership by managing schedules, coordinating communication and keeping work organised and on track.</p>
+          <ul class="tags">
+            <li>Organisation</li>
+            <li>Communication</li>
+            <li>Coordination</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <span>Email</span>
+          <a href="mailto:stellanwae@gmail.com">stellanwae@gmail.com</a>
+        </li>
+        <li>
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/stella-nwae/" rel="noopener noreferrer">linkedin.com/in/stella-nwae</a>
+        </li>
+        <li>
+          <span>GitHub</span>
+          <a href="https://github.com/Stellanwae" rel="noopener noreferrer">github.com/Stellanwae</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Stella Nwae <span>·</span> Nairobi, Kenya</p>
+  </footer>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll(".filters [data-filter]");
+      var cards = document.querySelectorAll(".timeline [data-type]");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var filter = button.getAttribute("data-filter");
+
+          buttons.forEach(function (other) {
+            var on = other === button;
+            other.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+
+          cards.forEach(function (card) {
+            var type = card.getAttribute("data-type");
+            var show = filter === "all" || type === filter;
+            card.hidden = !show;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
