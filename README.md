@@ -26,6 +26,5 @@ A single-page portfolio showing my work history and projects, built with AI assi
 Copy one `<li class="card">` block in `index.html`, paste it at the top of the timeline list, set `data-type` to `"job"` or `"project"`, and update the text.
 
 ## Contact
-- Email: stellanwae@gmail.com
 - LinkedIn: [linkedin.com/in/stella-nwae](https://www.linkedin.com/in/stella-nwae/)
 - GitHub: [github.com/Stellanwae](https://github.com/Stellanwae)
